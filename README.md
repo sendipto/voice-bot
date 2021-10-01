@@ -10,20 +10,28 @@
     - Copy the `url` value.
 
 ## Configuring the application
-
 1. Open the *config/config.env* file and add the service credentials that you obtained in the previous step.
-    ```
-    TEXT_TO_SPEECH_IAM_APIKEY=<your text to speech apikey>
-    TEXT_TO_SPEECH_URL=<your text to speech url>
-    SPEECH_TO_TEXT_IAM_APIKEY=<your speech to text apikey>
-    SPEECH_TO_TEXT_URL=<your speech to text url>
-    ASSISTANT_APIKEY=<your assistant apikey>
-    ASSISTANT_IAM_APIKEY=<your assistant iam apikey>
-    ASSISTANT_URL=<your assistan url>
-    ASSISTANT_AUTH_TYPE=iam
-    workspaceId=<your workspace id>
 
-    ```
+```
+PORT=8080
+
+### Watson Speech to Text
+SPEECH_TO_TEXT_IAM_APIKEY="***"
+SPEECH_TO_TEXT_URL="https://api.***.speech-to-text.watson.cloud.ibm.com/instances/***"
+
+### Watson Text to Speech
+TEXT_TO_SPEECH_IAM_APIKEY="***"
+TEXT_TO_SPEECH_URL="https://api.***.text-to-speech.watson.cloud.ibm.com/instances/***"
+
+### Watson Assistant
+ASSISTANT_APIKEY="***"
+ASSISTANT_IAM_APIKEY="same as before"
+ASSISTANT_URL="https://api.***.assistant.watson.cloud.ibm.com/instances/***"
+
+### Optionally, use a non-default skill by specifying your own workspace ID or name.
+workspaceId="***"
+
+```
 
 ## Running locally
 
@@ -42,8 +50,3 @@
 3. View the application in a browser at `localhost:8080`
 
 4. It will works like a charm
-
-
-<img src="https://github.com/Najibsaurus/VoiceBot-Watson/blob/master/screenshoot-wtsn.png" width="70%" height="70%">
-
-
